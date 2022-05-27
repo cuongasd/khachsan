@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+	<title>Happy Hotel | Booking</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+	<script type="text/javascript" src="js/jquery-1.6.js"></script>
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/cufon-replace.js"></script>
+	<script type="text/javascript" src="js/Adamina_400.font.js"></script>
+	<script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+	<!--[if lt IE 9]>
+<script type="text/javascript" src="js/html5.js"></script>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
+<![endif]-->
+</head>
+
+<body id="page3">
+	<div class="bg1">
+		<div class="bg2"> 
+			<div class="main">
+				<!-- header -->
+				<header>
+					<h1><a href="index.html" id="logo">HappyHotel</a></h1>
+					<div class="department"> 40 Nguyen Trai, Ha Dong, Ha Noi<br>
+						<span>Freephone: &nbsp; +84 789 999 999</span>
+					</div>
+				</header>
+				<div class="box">
+					<nav>
+						<ul id="menu">
+							<li><a href="\">Home</a></li>
+							<li><a href="\services">Services</a></li>
+							<li class="active"><a href="\booking">Booking</a></li>
+							<li><a href="\rooms">Rooms</a></li>
+							<li th:switch="${inOut}">
+								<a th:case="${false}" href="\login">Check</a>
+								<a th:case="${true}" href="\check">Check</a>
+							</li>
+							<li th:switch="${inOut}">
+								<a th:case="${false}" href="\login">Login</a>
+								<a th:case="${true}" href="\login">Logout</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- header end -->
+					<!-- content -->
+					<article id="content">
+						<div class="box1">
+							<div class="wrapper">
+								<form action="#" id="form1">
+									<h2>Book a Room</h2>
+									<fieldset>
+										<div class="row">
+											<input type="text" class="input">
+											Your Name:
+										</div>
+										<div class="row">
+											<input type="text" class="input">
+											E-Mail Address:
+										</div>
+										<div class="row">
+											<input type="text" class="input">
+											Home Phone:
+										</div>
+										<div class="row">
+											<input type="text" class="input">
+											Length of Stay:
+										</div>
+										<div class="row">
+											<input type="text" class="input">
+											Number in Party:
+										</div>
+										<div class="row">
+											Arrival Date: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="date"
+												class="input" style="background-color: white;"></div>
+										<div class="wrapper"> <a href="#" class="button1">Send</a> <a href="#"
+												class="button1">Clear</a> </div>
+									</fieldset>
+								</form>
+								<div class="col2 pad">
+									<h2><img src="images/title_marker1.jpg" alt="">Best Propositions of This Month</h2>
+									
+									<div class="wrapper line1">
+									<div th:each="room : ${listRoom}">
+									<div li th:switch="${room.id%2}">
+										<div th:case="${1}"class="col3">
+											<figure class="pad_bot3"><img src="images/page3_img1.jpg" alt=""></figure>
+											<p class="pad_bot1"><strong class="color3">Phong [[${room.id}]]</strong></p>
+											<p>[[${room.description}]]</p>
+											<ul class="list2">
+												<li><span>[[${room.price}]] $</span>Price</li>
+												<li><span>[[${room.type}]]</span>Type</li>
+											</ul>
+											<a th:href="@{'/bookroom?id=' + ${room.id}}" class="button2">Book Room</a>
+										</div>
+										<div th:case="${0}"class="col3 pad_left2">
+											<figure class="pad_bot3"><img src="images/page3_img4.jpg" alt=""></figure>
+											<p class="pad_bot1"><strong class="color3">Phong [[${room.id}]]</strong></p>
+											<p>[[${room.description}]].</p>
+											<ul class="list2">
+												<li><span>[[${room.price}]] $</span>Price</li>
+												<li><span>[[${room.type}]]</span>Type</li>
+											</ul>
+											<a th:href="@{'/bookroom?id=' + ${room.id}}" class="button2">Book Room</a>
+										</div>
+									</div>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pad">
+							<div class="wrapper line3">
+								<div class="col2">
+									<h2>Why Choose Happy Hotel</h2>
+									<p class="pad_bot1"><strong class="color2"></p>
+									<div class="wrapper">
+										<figure class="left marg_right1"><img src="images/booking.png" alt="">
+										</figure>
+										<p class="pad_bot1"><strong class="color2">- Prices listed are inclusive of all applicable taxes,
+										surcharges and payment fees .</strong>
+										</p>
+										<p class="pad_bot1"><strong class="color2">- The diversity of rooms : price, type with the best services 
+										and furniture .</strong>
+										</p>
+										<p class="pad_bot1"><strong class="color2">- Can book for friends and relatives .</strong>
+										</p>
+										<p class="pad_bot1"><strong class="color2">- Only 10 kilometers from the centre of Ha Noi.</strong>
+										</p>
+										<p class="pad_bot1"><strong class="color2">- Book rooms in 3 easy steps : Login, Search and Pay .</strong>
+										</p>
+										<br>
+										<a href="#" class="button1">Read More</a>
+									
+									</div>
+									
+								</div>
+								
+								<div class="col1 pad_left1">
+									<h2>How To Book A Room</h2>
+									<div class="wrapper">
+										<p class="pad_bot1"><strong class="color2">- Search room with price or type.</strong>
+										</p>
+										<p class="pad_bot1"><strong class="color2">- Choose room you want.</strong>
+										</p>
+										<p class="pad_bot1"><strong class="color2">- Enter the needed information.</strong>
+										</p>
+										<p class="pad_bot1"><strong class="color2">- Pay and have a good time.</strong>
+										</p>
+									</div>
+									<div class="pad_bot2">
+										<div class="wrapper line2">
+											<div class="col1">
+												<ul class="list1">
+													<li><a href="#">How to seach a room</a></li>
+													<li><a href="#">How to pay with visa</a></li>
+													<li><a href="#">How to book a room for my friend</a></li>
+													<li><a href="#">How to use services</a></li>
+									</ul>
+									<a href="#" class="button1">Read More</a>
+								</div>
+							</div>
+						</div>
+					</article>
+					<!--content end-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<!-- footer -->
+		<footer>
+			<div class="col2">
+				<nav>
+					<ul id="footer_menu">
+						<li><a href="index.html">About Us</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li class="active"><a href="booking.html">Booking</a></li>
+						<li><a href="rooms.html">Rooms</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col1 pad_left1">
+				<ul id="icons">
+					<li><a href="#" class="normaltip"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip"><img src="images/icon4.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<!-- {%FOOTER_LINK} -->
+		</footer>
+		<!-- footer end -->
+	</div>
+	<script type="text/javascript">Cufon.now();</script>
+</body>
+
+</html>

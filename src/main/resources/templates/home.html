@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Happy Hotel | Home</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+	<script type="text/javascript" src="js/jquery-1.6.js"></script>
+	<script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript" src="js/cufon-replace.js"></script>
+	<script type="text/javascript" src="js/Adamina_400.font.js"></script>
+	<script type="text/javascript" src="js/jquery.jqtransform.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/kwicks-1.5.1.pack.js"></script>
+	<script type="text/javascript" src="js/atooltip.jquery.js"></script>
+	<!--[if lt IE 9]>
+<script type="text/javascript" src="js/html5.js"></script>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
+<![endif]-->
+</head>
+
+<body id="page1">
+	<div class="bg1">
+		<div class="bg2">
+			<div class="main">
+				<!-- header -->
+				<header>
+					<h1><a href="index.html" id="logo">HappyHotel</a></h1>
+					<div class="department"> 40 Nguyen Trai, Ha Dong, Ha Noi<br>
+						<span>Freephone: &nbsp; +1 789 999 999</span>
+					</div>
+				</header>
+				<div class="box">
+					<nav>
+						<ul id="menu">
+							<li class="active"><a href="\">Home</a></li>
+							<li th:switch="${inOut}">
+									<a  th:case="${false}" href="\login">Service</a>
+									<a  th:case="${true}" href="\services">Service</a>
+							</li>
+							<li th:switch="${inOut}">
+									<a  th:case="${false}" href="\login">Booking</a>
+									<a  th:case="${true}" href="\booking">Booking</a>
+							</li>
+							<li><a href="\rooms">Rooms</a></li>
+							<li th:switch="${inOut}">
+								<a th:case="${false}" href="\login">Check</a>
+								<a th:case="${true}" href="\check">Check</a>
+							</li>
+							<li th:switch="${inOut}">
+									<a  th:case="${false}" href="\login">Login</a>
+									<a  th:case="${true}" href="\login">Logout</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- header end -->
+					<!-- content -->
+					<article id="content">
+						<div class="box1">
+							<div class="wrapper">
+								<div class="kwicks-wrapper marg_bot1" >
+									<ul class="kwicks horizontal">
+										<li><img src="images/img1.jpg" alt=""></li>
+										<li><img src="images/img2.jpg" alt=""></li>
+										<li><img src="images/img3.jpg" alt=""></li>
+										<li><img src="images/img4.jpg" alt=""></li>
+									</ul>
+								</div>
+							</div>
+							<div class="pad">
+								<div class="line1">
+									<div class="wrapper line2">
+										<div class="col1">
+											<h2><img src="images/title_marker1.jpg" alt="">Best Rates</h2>
+											<p class="pad_bot1">These are the best rates of our clients.</p>
+											<a href="#" class="color1">Read More</a>
+										</div>
+										<div class="col1 pad_left1">
+											<h2><img src="images/title_marker2.jpg" alt="">Hotel Guide</h2>
+											<p class="pad_bot1">These are some guide for our hotel.</p>
+											<a href="#" class="color1">Read More</a>
+										</div>
+										<div class="col1 pad_left1">
+											<h2><img src="images/title_marker3.jpg" alt="">Packages</h2>
+											<p class="pad_bot1">This Happy Hotel website template has several pages: 
+													<a href="index.html">About Us</a>, 
+													<a href="services.html">Services</a>, 
+													<a href="booking.html">Booking</a>, <a href="rooms.html">Our Rooms</a>,
+													<a href="locations.html">Contact Us</a> 
+											</p>
+											<a href="#" class="color1">Read More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pad">
+							<div class="wrapper line3">
+								<div class="col2">
+									<h2>Welcome to Our Hotel!</h2>
+									<p class="pad_bot1"><strong class="color2">This is the project in Web Programming 2022.</strong><br>
+										This website is built by Spring Tool Suite 4. </p>
+									<p class="pad_bot2">This website helps client booking room, searching room, choosing services and paying.</p>
+									<a href="#" class="button1">Read More</a>
+								</div>
+								<div class="col1 pad_left1">
+									<h2>About Us</h2>
+									<div class="wrapper">
+										<p class="pad_bot1"><strong class="color2">Group 8</strong></p>
+										<p class="pad_bot2"> This is a project of Group 8.</p>
+									</div>
+									<a href="#" class="button1">Read More</a>
+								</div>
+							</div>
+						</div>
+					</article>
+					<!--content end-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<!-- footer -->
+		<footer>
+			<div class="col2">
+				<nav>
+					<ul id="footer_menu">
+						<li class="active"><a href="index.html">About Us</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="booking.html">Booking</a></li>
+						<li><a href="rooms.html">Rooms</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col1 pad_left1">
+				<ul id="icons">
+					<li><a href="#" class="normaltip"><img src="images/icon1.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip"><img src="images/icon2.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip"><img src="images/icon3.jpg" alt=""></a></li>
+					<li><a href="#" class="normaltip"><img src="images/icon4.jpg" alt=""></a></li>
+				</ul>
+			</div>
+			<!-- {%FOOTER_LINK} -->
+		</footer>
+		<!-- footer end -->
+	</div>
+	<script type="text/javascript">Cufon.now();</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('.kwicks').kwicks({
+				max: 500,
+				spacing: 0,
+				event: 'mouseover'
+			});
+		})
+	</script>
+</body>
+
+</html>
