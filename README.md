@@ -1,3 +1,10 @@
+Nhóm 08 Lớp Lập Trình web 03
+Thành viên:
+Trần Văn Cường B19DCCN092
+Nguyễn Danh Bình B19DCCN068
+Hoàng Vân Anh B19DCCN016
+
+
 Mô tả dự án:
 Công Nghệ Thông Tin đang phát triển mạnh mẽ.Và nó đang ngày càng được ứng dụng nhiều vào các nghành kinh tế,khoa học kĩ thuật và trong đời sống hàng ngày của chúng ta.Xã hội ngày càng phát triển thì nhu cầu giải phóng sức lao động của con người ngày càng tăng lên. Để đáp ứng nhu cầu đó,một trong những nhiệm vụ quan trọng của những người làm trong lĩnh vực Công Nghệ Thông Tin là viết ra những phần mềm có ứng dụng trong thực tế, đáp ứng nhu cầu cho nhiều đối tượng sử dụng khác nhau.
 Thực tế nhiều khách sạn chưa có website trực tuyến, điển hình như khách sạn Happy Hotel.Việc xây dựng website đáp ứng nhu cầu thực tế, giúp hoạt động của khách sạn linh động và phát triển, phù hợp với xu thế thương mại điện tử hiện nay.
