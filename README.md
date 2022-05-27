@@ -46,3 +46,12 @@ Hệ thống hiện ra danh sách các thông tin các phòng của khách sạn
 Sửa xóa thông khách hàng:
 Admin đăng nhập bằng tài khoản admin và ấn vào chức năng  UpdateUser
 Hệ thống hiện ra danh sách thông tin tài khoản của các khách hàng và admin có thể ấn vào delete hoặc update để giúp khách hàng chỉnh sửa thông tin.
+
+----****----
+
+Đóng góp của các thành viên:
+Nguyễn Danh Bình: làm front end cho tài khoản khách
+Trần Văn Cường làm back end cho tài khoản khách
+Hoàng Vân Anh làm back end và front end cho admin
+
+
