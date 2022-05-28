@@ -1,72 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns=http://www.w3.org/1999/xhtml xmlns:th="http://www.thymeleaf.org">
-  <head>
-  	<title>Happy Hotel | Booking</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+	<title>Update Information Booking</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	
-	<link rel="stylesheet" href="css/style1.css">
 
-	</head>
-	<body>
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Update Booking</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<h4 class="text-center mb-4">Table Booking</h4>
-					<div class="table-wrap">
-						<table class="table">
-					    <thead class="thead-primary">
-					      <tr>
-					        <th>ID</th>
-					        <th>Name</th>
-					        <th>Email</th>
-					        <th>Phone</th>
-					        <th>LengthStay</th>
-					        <th>NumberPerSon</th>
-					        <th>ArrivalDate</th>
-					        <th>Room</th>
-					        <th>Action</th>
-					      </tr>
-					    </thead>
-					    <tbody>
-					  <th:block th:each ="booking:${listBooking}">
-					      <tr>
-					        <td>[[${booking.id}]]</td>
-					        <td>[[${booking.name}]]</td>
-					        <td>[[${booking.email}]]</td>
-					        <td>[[${booking.phone}]]</td>
-					        <td>[[${booking.lengthStay}]]</td>
-					        <td>[[${booking.numberPerson}]]</td>
-					        <td>[[${booking.arrivalDate}]]</td>
-					        <td>Phong [[${booking.room.id}]]</td>
-					        <td><a th:href="@{'bookingupdate?id='+${booking.id}}" class="btn btn-primary">Edit</a></td>
-					      </tr>
-					    </th:block>
-					    </tbody>
-					  </table>
-					</div>
-				</div>
-			</div>
-			<br>
-			<a th:href="@{/admin}" class="btn btn-primary">Back</a>
-		</div>
-	</section>
+	<link rel="stylesheet" href="css/styleadmin.css">
+	<!--[if lt IE 9]>
+<script type="text/javascript" src="js/html5.js"></script>
+<link rel="stylesheet" href="css/ie.css" type="text/css" media="all">
+<![endif]-->
+</head>
 
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+<body>
 
-	</body>
+	<header>
+		<nav>
+			<h1><a href="index.html" id="logo">HappyHotel</a></h1>
+			<ul id="navli">
+				<li><a class="homered" href="\listbooking">Booking Update</a></li>
+				<li><a class="homeblack" href="\listroom">Room Update</a></li>
+				<li><a class="homeblack" href="\listuser">User Update</a></li>
+				<li><a class="homeblack" href="\login">Log Out</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="divider"></div>
+	<div id="divimg">
+
+	</div>
+
+	<table>
+		<tr>
+			<th align="center">ID</th>
+			<th align="center">Name</th>
+			<th align="center">Email</th>
+			<th align="center">Phone</th>
+			<th align="center">LengthStay</th>
+			<th align="center">Number Of Person</th>
+			<th align="center">Arrival Date</th>
+			<th align="center">Room</th>
+			<th align="center">User ID</th>
+			<th align="center">Action</th>
+		</tr>
+
+		<th:block th:each="booking: ${listBooking}">
+			<tr>
+				<td>[[${booking.id}]]</td>
+				<td>[[${booking.name}]]</td>
+				<td>[[${booking.email}]]</td>
+				<td>[[${booking.phone}]]</td>
+				<td>[[${booking.lengthStay}]]</td> 
+				<td>[[${booking.numberPerson}]]</td>
+				<td>[[${booking.arrivalDate}]]</td>
+				<td>[[${booking.room.id}]]</td>
+				<td>[[${booking.user.id}]]</td>
+				<td><a th:href="@{'bookingupdate?id='+${booking.id}}" class="btn btn-primary">Edit</a></td>
+				</td>
+			</tr>
+		</th:block>
+
+	</table>
+</body>
+
 </html>
-

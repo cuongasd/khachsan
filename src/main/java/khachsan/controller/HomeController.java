@@ -17,6 +17,6 @@ public class HomeController {
 	@GetMapping("/admin")
 	public String homeAdmin(Model model) {
 		model.addAttribute("inOut",UserService.inOut(UserService.user));
-		return "update";
+		return "redirect:/listbooking";
 	}
 }
